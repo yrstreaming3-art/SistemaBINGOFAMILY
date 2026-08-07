@@ -1,13 +1,22 @@
-# Bloquea el acceso directo a todo el proyecto excepto la carpeta public/
-# El document root del servidor SIEMPRE debe apuntar a /public
+Options -Indexes
+Options +FollowSymLinks
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{REQUEST_URI} !^/public/
-    RewriteRule ^(.*)$ /public/$1 [L]
+
+    # Si la peticion no es un archivo o directorio existente,
+    # se redirige todo hacia index.php como parametro "url"
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
 </IfModule>
 
-# Deniega acceso total a archivos de configuracion y control de versiones
-<FilesMatch "\.(env|env\.example|git|gitignore|sql)$">
+# Evita listar el contenido de directorios
+<IfModule mod_autoindex.c>
+    IndexIgnore *
+</IfModule>
+
+# Bloquea el acceso directo a archivos sensibles dentro de public/
+<FilesMatch "\.(env|log|sql|md)$">
     Require all denied
 </FilesMatch>
