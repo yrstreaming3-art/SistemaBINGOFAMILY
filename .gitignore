@@ -1,0 +1,15 @@
+# Variables de entorno (contiene contrasenas reales - NUNCA subir a GitHub)
+.env
+
+# Logs
+storage/logs/*.log
+
+# Archivos del sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencias (si en el futuro se agrega Composer)
+vendor/
+composer.lock

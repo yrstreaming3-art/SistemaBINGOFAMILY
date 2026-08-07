@@ -1,0 +1,13 @@
+# Bloquea el acceso directo a todo el proyecto excepto la carpeta public/
+# El document root del servidor SIEMPRE debe apuntar a /public
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L]
+</IfModule>
+
+# Deniega acceso total a archivos de configuracion y control de versiones
+<FilesMatch "\.(env|env\.example|git|gitignore|sql)$">
+    Require all denied
+</FilesMatch>
