@@ -1,0 +1,38 @@
+{
+  "name": "Bingo SaaS - Plataforma de Bingo Online",
+  "short_name": "Bingo SaaS",
+  "description": "Plataforma profesional de Bingo Online para la gestion de clientes, licencias y sorteos.",
+  "start_url": "./dashboard",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0B2E59",
+  "theme_color": "#0B2E59",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "assets/img/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icons/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/img/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

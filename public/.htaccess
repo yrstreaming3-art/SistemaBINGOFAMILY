@@ -1,0 +1,22 @@
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Si la peticion no es un archivo o directorio existente,
+    # se redirige todo hacia index.php como parametro "url"
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+# Evita listar el contenido de directorios
+<IfModule mod_autoindex.c>
+    IndexIgnore *
+</IfModule>
+
+# Bloquea el acceso directo a archivos sensibles dentro de public/
+<FilesMatch "\.(env|log|sql|md)$">
+    Require all denied
+</FilesMatch>
