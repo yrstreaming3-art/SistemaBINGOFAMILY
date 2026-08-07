@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <style>
+      .ball { fill: none; stroke: #FFFFFF; stroke-width: 3; }
+      .ball-line { stroke: #FFFFFF; stroke-width: 2; opacity: 0.6; }
+      .card { fill: none; stroke: #D4AF37; stroke-width: 3; }
+      .card-line { stroke: #D4AF37; stroke-width: 1.5; opacity: 0.7; }
+      .txt { fill: #FFFFFF; font-family: Arial, sans-serif; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- Carton de bingo (arriba izquierda) -->
+  <g transform="translate(40,60) rotate(-8)">
+    <rect class="card" x="0" y="0" width="220" height="220" rx="14"/>
+    <line class="card-line" x1="44" y1="0" x2="44" y2="220"/>
+    <line class="card-line" x1="88" y1="0" x2="88" y2="220"/>
+    <line class="card-line" x1="132" y1="0" x2="132" y2="220"/>
+    <line class="card-line" x1="176" y1="0" x2="176" y2="220"/>
+    <line class="card-line" x1="0" y1="44" x2="220" y2="44"/>
+    <line class="card-line" x1="0" y1="88" x2="220" y2="88"/>
+    <line class="card-line" x1="0" y1="132" x2="220" y2="132"/>
+    <line class="card-line" x1="0" y1="176" x2="220" y2="176"/>
+    <circle cx="110" cy="110" r="26" fill="#D4AF37" opacity="0.85"/>
+  </g>
+
+  <!-- Bola de bingo grande (derecha) -->
+  <g transform="translate(560,120)">
+    <circle class="ball" cx="0" cy="0" r="90"/>
+    <line class="ball-line" x1="-90" y1="0" x2="90" y2="0"/>
+    <line class="ball-line" x1="0" y1="-90" x2="0" y2="90"/>
+    <text class="txt" x="0" y="14" font-size="46" text-anchor="middle">B7</text>
+  </g>
+
+  <!-- Bola de bingo mediana (abajo izquierda) -->
+  <g transform="translate(120,620)">
+    <circle class="ball" cx="0" cy="0" r="65"/>
+    <line class="ball-line" x1="-65" y1="0" x2="65" y2="0"/>
+    <line class="ball-line" x1="0" y1="-65" x2="0" y2="65"/>
+    <text class="txt" x="0" y="10" font-size="32" text-anchor="middle">N32</text>
+  </g>
+
+  <!-- Carton de bingo (abajo derecha) -->
+  <g transform="translate(520,540) rotate(10)">
+    <rect class="card" x="0" y="0" width="200" height="200" rx="14"/>
+    <line class="card-line" x1="40" y1="0" x2="40" y2="200"/>
+    <line class="card-line" x1="80" y1="0" x2="80" y2="200"/>
+    <line class="card-line" x1="120" y1="0" x2="120" y2="200"/>
+    <line class="card-line" x1="160" y1="0" x2="160" y2="200"/>
+    <line class="card-line" x1="0" y1="40" x2="200" y2="40"/>
+    <line class="card-line" x1="0" y1="80" x2="200" y2="80"/>
+    <line class="card-line" x1="0" y1="120" x2="200" y2="120"/>
+    <line class="card-line" x1="0" y1="160" x2="200" y2="160"/>
+    <circle cx="100" cy="100" r="24" fill="#FFFFFF" opacity="0.7"/>
+  </g>
+
+  <!-- Bola pequena flotante (centro) -->
+  <g transform="translate(400,380)">
+    <circle class="ball" cx="0" cy="0" r="45" opacity="0.6"/>
+    <text class="txt" x="0" y="8" font-size="22" text-anchor="middle" opacity="0.6">G54</text>
+  </g>
+</svg>
